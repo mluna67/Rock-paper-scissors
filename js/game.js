@@ -18,8 +18,28 @@ btn_play.onclick = ()=>{
     document.getElementById("resultado").style.display = "none";
     document.getElementById("casa").innerHTML = "";
 }
-var puntaje = 0;
+var puntaje = recuperar_cookie();
+document.getElementById("puntaje").innerText = puntaje;
 var options = ["paper", "scissors", "rock"];
+var str_puntaje;
+
+function recuperar_cookie(){
+    puntaje = 0;
+
+    if(document.cookie.includes("puntaje")){
+        var array = document.cookie.split(";");
+        
+        for (let index = 0; index < array.length; index++) {
+            if (array[index].includes("puntaje")) {
+              var array2 =array[index].split("=");
+              puntaje = parseInt(array2[1]);  
+            }
+        }
+    }else{
+        document.cookie = "puntaje=0; max-age=86400;";
+    }
+    return puntaje;
+}
 
 function jugar(election){
     document.getElementById("step-1").style.display = "none";
@@ -55,9 +75,12 @@ function jugar(election){
 function actualizar(gana, election, home_election) {
     var contenedor;
     var mensaje = document.getElementById("msj-res");
+
+
     setTimeout(function(){
         document.getElementById("casa").innerHTML = document.getElementById(options[home_election]).outerHTML;;
     }, 1000);
+
     setTimeout(function(){
         if (gana ==0) {//gana jugador
             console.log("gana jugador")
@@ -79,5 +102,6 @@ function actualizar(gana, election, home_election) {
             document.getElementById("puntaje").innerText = puntaje;
         }
         document.getElementById("resultado").style.display = "block";
+        document.cookie = "puntaje="+puntaje+"; max-age=86400;"
     }, 1500);
 }
