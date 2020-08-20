@@ -1,6 +1,7 @@
 btn_paper = document.getElementById("paper");
 btn_scissors = document.getElementById("scissors");
-btn_rock = document.getElementById("rock");
+btn_rock = document.getElementById("rock");//play-again
+btn_play = document.getElementById("play-again");
 
 btn_paper.onclick = ()=>{
     jugar("paper");
@@ -10,6 +11,12 @@ btn_scissors.onclick = ()=>{
 }
 btn_rock.onclick = ()=>{
     jugar("rock");
+}
+btn_play.onclick = ()=>{
+    document.getElementById("step-2").style.display = "none";
+    document.getElementById("step-1").style.display = "block";
+    document.getElementById("resultado").style.display = "none";
+    document.getElementById("casa").innerHTML = "";
 }
 var puntaje = 0;
 var options = ["paper", "scissors", "rock"];
@@ -47,6 +54,7 @@ function jugar(election){
 
 function actualizar(gana, election, home_election) {
     var contenedor;
+    var mensaje = document.getElementById("msj-res");
     setTimeout(function(){
         document.getElementById("casa").innerHTML = document.getElementById(options[home_election]).outerHTML;;
     }, 1000);
@@ -55,15 +63,21 @@ function actualizar(gana, election, home_election) {
             console.log("gana jugador")
             contenedor = document.getElementById("jugador");
             contenedor.innerHTML = "<div style='background-image: radial-gradient(#2a3352af,#2a3352ce); width: 300px; height:300px; border-radius: 50%;display: flex; justify-content: center; align-items:center;'>"+document.getElementById(election).outerHTML+"</div>";
+            mensaje.innerText = "YOU WIN";
         }else if(gana ==1){//gana la casa
             console.log("gana la casa")
             contenedor = document.getElementById("casa");
             contenedor.innerHTML = "<div style='background-image: radial-gradient(#2a3352af,#2a3352ce); width: 300px; height:300px; border-radius: 50%;display: flex; justify-content: center; align-items:center;'>"+document.getElementById(options[home_election]).outerHTML+"</div>";
+            mensaje.innerText = "YOU LOSE";
+        }else{
+            mensaje.innerText = "TIE"
         }
         if (puntaje<0) {
-            console.log("El juego termina");
+            puntaje = 0;
+            mensaje.innerText ="SHAMEFUL"
         }else{
             document.getElementById("puntaje").innerText = puntaje;
         }
+        document.getElementById("resultado").style.display = "block";
     }, 1500);
 }

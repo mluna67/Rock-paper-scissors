@@ -25,6 +25,12 @@ body{
 .lineas{
     position: absolute;
 }
+.resultado{
+    display: none;
+    position: absolute;
+    left: 42%;
+    top:50%;
+}
 .boton:hover{
     transform: scale(1.2);
 }
@@ -119,4 +125,28 @@ body{
     font-weight: 700;
     font-size: 3.5rem;
     margin-top: -25px;
+}
+#play-again{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #DCDCDB;
+    color: #D9405A;
+    height: 40px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    border-radius: 10px;
+}
+#play-again:hover{
+    background-color: white;
+}
+#msj-res{
+    text-align: center;
+    width: 190px;
+    color:white;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 3em;
 }
