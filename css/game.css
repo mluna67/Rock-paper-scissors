@@ -25,5 +25,13 @@ body{
 #score_label{
     color: hsl(229, 64%, 46%);
     font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
     margin-top: 0.6rem;
+}
+#puntaje{
+    color: rgb(86, 84, 105);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    margin-top: -25px;
 }
