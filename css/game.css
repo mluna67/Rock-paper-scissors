@@ -28,6 +28,23 @@ body{
 .boton:hover{
     transform: scale(1.2);
 }
+.texto-s2{
+    color:white;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.col-eleccion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.casa{
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    background-color: hsla(238, 48%, 15%, 0.644);
+}
 #paper{
     border-radius: 50%;
     width: 150px;

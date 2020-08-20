@@ -30,7 +30,9 @@
       </div>
       </div>
     </div>
-    <div class="row" id="step-1" style="width:100%;">
+
+    <!-- STEP 1 -->
+    <div class="row" id="step-1" style="width:100%; display: block;">
       <div class="row" style="width:100%;">
         <div class="col-md-6">
           <div id="paper" class="boton">
@@ -54,12 +56,34 @@
           <line x1="155" y1="25" x2="125" y2="70" style="stroke:hsla(238, 48%, 15%, 0.644); stroke-width:2.5"></line>
           <line x1="90" y1="25" x2="150" y2="25" style="stroke:hsla(238, 48%, 15%, 0.644); stroke-width:2.5"></line>
         </svg>
+      </div>  
+    </div>
+
+    <!--STEP 2-->
+    <div class="row" id="step-2" style="width:100%; display: none;">
+      <div class="row mt-5"style="width:100%;">
+        <div class="col-md-3"></div>
+        <div class="col-md-3 text-center">
+          <p class="texto-s2">YOU PICKED</p>
+        </div>
+        <div class="col-md-3 text-center">
+          <P class="texto-s2">THE HOUSE PICKED</P>
+        </div>
       </div>
-      
+      <div class="row mt-5"style="width:100%;">
+        <div class="col-md-3"></div>
+        <div class="col-md-3 col-eleccion" id="jugador">
+        </div>
+        <div class="col-md-3 col-eleccion" id="casa">
+          <div class="casa">
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <script src="js/game.js"></script>
 </body>
 </html>
