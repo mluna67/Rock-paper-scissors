@@ -22,6 +22,12 @@ body{
     margin-bottom: 1rem;
     margin-right: 0.1rem;
 }
+.lineas{
+    position: absolute;
+}
+.boton:hover{
+    transform: scale(1.2);
+}
 #paper{
     border-radius: 50%;
     width: 150px;
@@ -36,6 +42,9 @@ body{
     position: absolute;
     left: 65%;
     margin-top: 10%;
+    transition: transform .2s;
+    cursor: pointer;
+    z-index: 2;
 }
 #scissors{
     border-radius: 50%;
@@ -51,12 +60,17 @@ body{
     position: absolute;
     left: 12%;
     margin-top: 10%;
+    transition: transform .2s;
+    cursor: pointer;
+    z-index: 2;
 }
 .rock-row{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20%;
+    position: absolute;
+    z-index: 2;
 }
 #rock{
     border-radius: 50%;
@@ -69,6 +83,8 @@ body{
     border-style: solid;
     border-color: #D9405A;
     border-width: 18px;
+    transition: transform .2s;
+    cursor: pointer;
 }
 #score_label{
     color: hsl(229, 64%, 46%);
