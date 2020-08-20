@@ -45,6 +45,12 @@ body{
     height: 130px;
     background-color: hsla(238, 48%, 15%, 0.644);
 }
+.paper{
+    position: absolute;
+    left: 65%;
+    margin-top: 10%;
+    z-index: 2;
+}
 #paper{
     border-radius: 50%;
     width: 150px;
@@ -56,11 +62,13 @@ body{
     border-style: solid;
     border-color: #5471F2;
     border-width: 18px;
-    position: absolute;
-    left: 65%;
-    margin-top: 10%;
     transition: transform .2s;
     cursor: pointer;
+}
+.scissors{
+    position: absolute;
+    left: 12%;
+    margin-top: 10%;
     z-index: 2;
 }
 #scissors{
@@ -74,12 +82,8 @@ body{
     border-style: solid;
     border-color: #ECA523;
     border-width: 18px;
-    position: absolute;
-    left: 12%;
-    margin-top: 10%;
     transition: transform .2s;
     cursor: pointer;
-    z-index: 2;
 }
 .rock-row{
     display: flex;
