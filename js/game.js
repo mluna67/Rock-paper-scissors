@@ -16,7 +16,7 @@ btn_play.onclick = ()=>{
     document.getElementById("step-2").style.display = "none";
     document.getElementById("step-1").style.display = "block";
     document.getElementById("resultado").style.display = "none";
-    document.getElementById("casa").innerHTML = "";
+    document.getElementById("casa").innerHTML = "<div class='casa'></div>";
 }
 var puntaje = recuperar_cookie();
 document.getElementById("puntaje").innerText = puntaje;
