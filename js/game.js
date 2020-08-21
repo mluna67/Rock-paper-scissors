@@ -85,12 +85,12 @@ function actualizar(gana, election, home_election) {
         if (gana ==0) {//gana jugador
             console.log("gana jugador")
             contenedor = document.getElementById("jugador");
-            contenedor.innerHTML = "<div style='background-image: radial-gradient(#2a3352af,#2a3352ce); width: 500px; height:500px; position:absolute; z-index:1; border-radius: 50%;display: flex; justify-content: center; align-items:center;'>"+document.getElementById(election).outerHTML+"</div>";
+            contenedor.innerHTML = "<div style='background: repeating-radial-gradient(#21304F, #2C3755 18%); width: 450px; height:450px; position:absolute; z-index:1; border-radius: 50%;display: flex; justify-content: center; align-items:center;'>"+document.getElementById(election).outerHTML+"</div>";
             mensaje.innerText = "YOU WIN";
         }else if(gana ==1){//gana la casa
             console.log("gana la casa")
-            contenedor = document.getElementById("casa");
-            contenedor.innerHTML = "<div style='background-image: radial-gradient(#2a3352af,#2a3352ce); width: 500px; height:500px; position:absolute; z-index:1; border-radius: 50%;display: flex; justify-content: center; align-items:center;'>"+document.getElementById(options[home_election]).outerHTML+"</div>";
+            contenedor = document.getElementById("casa");//background: repeating-radial-gradient(#2a3352af,#2a3352ce);
+            contenedor.innerHTML = "<div style='background: repeating-radial-gradient(#21304F, #2C3755 18%); width: 450px; height:450px; position:absolute; z-index:1; border-radius: 50%;display: flex; justify-content: center; align-items:center;'>"+document.getElementById(options[home_election]).outerHTML+"</div>";
             mensaje.innerText = "YOU LOSE";
         }else{
             mensaje.innerText = "TIE"

@@ -27,11 +27,11 @@ body{
 .lineas{
     position: absolute;
 }
-.resultado{
+.resultado {
     display: none;
     position: absolute;
-    left: 42%;
-    top:50%;
+    left: 43.5%;
+    top: 50%;
     z-index: 1;
 }
 .boton:hover{
@@ -147,11 +147,11 @@ body{
 #play-again:hover{
     background-color: white;
 }
-#msj-res{
+#msj-res {
     text-align: center;
-    width: 190px;
-    color:white;
+    width: 140px;
+    color: white;
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-weight: 700;
-    font-size: 3em;
+    font-size: 2em;
 }
